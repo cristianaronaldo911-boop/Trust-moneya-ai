@@ -1,1 +1,212 @@
-# Trust-moneya-ai
+# Trust-moneya-ai<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Money AI</title>
+  <meta name="description" content="Trust Money AI - Create amazing AI video stories and bring your ideas to life.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 22px 15px;
+      background: #151d35;
+      border-bottom: 1px solid #293453;
+    }
+
+    header h2 {
+      margin: 0;
+      color: #57e3ff;
+    }
+
+    .hero {
+      padding: 65px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #57e3ff;
+    }
+
+    .hero p {
+      color: #c3cbe0;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      background: #57e3ff;
+      color: #091020;
+      border: none;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 30px 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 25px auto;
+    }
+
+    .card {
+      background: #151d35;
+      padding: 25px 18px;
+      border: 1px solid #293453;
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      color: #57e3ff;
+    }
+
+    .card p {
+      color: #c3cbe0;
+      line-height: 1.6;
+    }
+
+    .creator {
+      max-width: 650px;
+      margin: 20px auto;
+      background: #151d35;
+      padding: 25px;
+      border-radius: 14px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 14px;
+      border-radius: 9px;
+      border: 1px solid #394765;
+      background: #0b1020;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #aab5d0;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 25px 15px;
+      margin-top: 35px;
+      background: #151d35;
+      color: #aab5d0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>⚡ TRUST MONEY AI</h2>
+  </header>
+
+  <section class="hero">
+    <h1>Turn Your Ideas Into <span>Stories</span></h1>
+    <p>
+      Welcome to Trust Money AI! Explore creative AI video ideas,
+      imagine exciting stories, and prepare to bring your imagination to life.
+    </p>
+    <a class="button" href="#create">Explore AI Studio</a>
+  </section>
+
+  <section class="section">
+    <h2>What Can You Create?</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🎬 Text to Video</h3>
+        <p>Turn your written ideas into exciting video scenes.</p>
+      </div>
+
+      <div class="card">
+        <h3>🖼️ Image to Video</h3>
+        <p>Bring your pictures to life with creative motion.</p>
+      </div>
+
+      <div class="card">
+        <h3>📖 AI Story Videos</h3>
+        <p>Plan entertaining stories with different characters and scenes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="create">
+    <h2>Trust Money AI Studio</h2>
+    <p>Describe the video you dream of creating.</p>
+
+    <div class="creator">
+      <textarea id="prompt" placeholder="Example: A young Nigerian boy works hard, follows his dreams, and builds a successful business..."></textarea>
+
+      <button class="button" onclick="showMessage()">
+        Prepare My Video Idea
+      </button>
+
+      <p id="message" class="note"></p>
+      <p class="note">
+        This is the first website version. Actual AI video generation
+        will require connecting a video-generation service.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Trust Money AI. All rights reserved.</p>
+    <p>Built for creativity. Powered by imagination.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      const prompt = document.getElementById("prompt").value.trim();
+      const message = document.getElementById("message");
+
+      if (!prompt) {
+        message.textContent = "Please describe your video idea first.";
+        return;
+      }
+
+      message.textContent =
+        "Your idea is ready! Actual AI video generation will be added when a video service is connected.";
+    }
+  </script>
+
+</body>
+</html>
