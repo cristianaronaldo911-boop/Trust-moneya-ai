@@ -1,212 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trust Money AI</title>
-  <meta name="description" content="Trust Money AI - Create amazing AI video stories and bring your ideas to life.">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1020;
-      color: white;
-      text-align: center;
-    }
-
-    header {
-      padding: 22px 15px;
-      background: #151d35;
-      border-bottom: 1px solid #293453;
-    }
-
-    header h2 {
-      margin: 0;
-      color: #57e3ff;
-    }
-
-    .hero {
-      padding: 65px 20px 40px;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #57e3ff;
-    }
-
-    .hero p {
-      color: #c3cbe0;
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto 25px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 22px;
-      background: #57e3ff;
-      color: #091020;
-      border: none;
-      border-radius: 9px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .section {
-      padding: 30px 18px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      max-width: 900px;
-      margin: 25px auto;
-    }
-
-    .card {
-      background: #151d35;
-      padding: 25px 18px;
-      border: 1px solid #293453;
-      border-radius: 14px;
-    }
-
-    .card h3 {
-      color: #57e3ff;
-    }
-
-    .card p {
-      color: #c3cbe0;
-      line-height: 1.6;
-    }
-
-    .creator {
-      max-width: 650px;
-      margin: 20px auto;
-      background: #151d35;
-      padding: 25px;
-      border-radius: 14px;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 120px;
-      padding: 14px;
-      border-radius: 9px;
-      border: 1px solid #394765;
-      background: #0b1020;
-      color: white;
-      font-size: 16px;
-      resize: vertical;
-      margin-bottom: 15px;
-    }
-
-    .note {
-      font-size: 13px;
-      color: #aab5d0;
-      line-height: 1.6;
-    }
-
-    footer {
-      padding: 25px 15px;
-      margin-top: 35px;
-      background: #151d35;
-      color: #aab5d0;
-      font-size: 14px;
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 30px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust Money AI</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#0b1020;
+  color:#fff;
+  line-height:1.6
+}
+header{
+  text-align:center;
+  padding:35px 18px;
+  background:linear-gradient(135deg,#151c38,#5630a5)
+}
+header h1{font-size:32px;margin:0}
+header p{color:#e1dcff}
+main{max-width:850px;margin:auto;padding:20px}
+.card{
+  background:#171e33;
+  padding:22px;
+  margin:20px 0;
+  border-radius:16px;
+  border:1px solid #303957
+}
+h2{color:#c4b5fd}
+label{display:block;margin:14px 0 6px;font-weight:bold}
+textarea,select,input{
+  width:100%;
+  padding:13px;
+  border-radius:9px;
+  border:1px solid #58617d;
+  background:#0c1326;
+  color:white;
+  font-size:16px
+}
+textarea{min-height:120px;resize:vertical}
+button{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  border:0;
+  border-radius:9px;
+  background:#8b5cf6;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer
+}
+button:hover{background:#7042df}
+.scene{
+  background:#0c1326;
+  padding:16px;
+  margin:14px 0;
+  border-left:4px solid #a78bfa;
+  border-radius:8px
+}
+.scene h3{color:#c4b5fd;margin-top:0}
+.small{font-size:13px;color:#b9c1d9}
+#results{display:none}
+footer{text-align:center;padding:25px;color:#b9c1d9}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <h2>⚡ TRUST MONEY AI</h2>
-  </header>
+<header>
+  <h1>🎬 Trust Money AI</h1>
+  <p>Turn your imagination into exciting stories!</p>
+</header>
 
-  <section class="hero">
-    <h1>Turn Your Ideas Into <span>Stories</span></h1>
-    <p>
-      Welcome to Trust Money AI! Explore creative AI video ideas,
-      imagine exciting stories, and prepare to bring your imagination to life.
-    </p>
-    <a class="button" href="#create">Explore AI Studio</a>
+<main>
+  <section class="card">
+    <h2>📖 AI Story Studio</h2>
+    <p>Describe your idea and create a story with different scenes.</p>
+
+    <label for="idea">What is your story about?</label>
+    <textarea id="idea" placeholder="Example: A poor village boy works hard, becomes successful, and helps his family."></textarea>
+
+    <label for="genre">Choose your story type</label>
+    <select id="genre">
+      <option value="drama">Emotional Drama</option>
+      <option value="comedy">Comedy</option>
+      <option value="romance">Love Story</option>
+      <option value="adventure">Adventure</option>
+      <option value="success">Success Story</option>
+      <option value="mystery">Mystery</option>
+    </select>
+
+    <label for="hero">Main character's name (optional)</label>
+    <input id="hero" placeholder="Example: Trust Money">
+
+    <label for="length">Number of scenes</label>
+    <select id="length">
+      <option value="3">3 scenes — Short story</option>
+      <option value="5" selected>5 scenes — Medium story</option>
+      <option value="7">7 scenes — Longer story</option>
+    </select>
+
+    <button onclick="createStory()">✨ Create My Story</button>
+    <p class="small">This starter version uses story templates. A real AI service is not connected yet.</p>
   </section>
 
-  <section class="section">
-    <h2>What Can You Create?</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>🎬 Text to Video</h3>
-        <p>Turn your written ideas into exciting video scenes.</p>
-      </div>
-
-      <div class="card">
-        <h3>🖼️ Image to Video</h3>
-        <p>Bring your pictures to life with creative motion.</p>
-      </div>
-
-      <div class="card">
-        <h3>📖 AI Story Videos</h3>
-        <p>Plan entertaining stories with different characters and scenes.</p>
-      </div>
-    </div>
+  <section class="card" id="results">
+    <h2 id="storyTitle">Your Story</h2>
+    <p id="storyIntro"></p>
+    <div id="scenes"></div>
+    <button onclick="downloadStory()">⬇️ Download My Story</button>
+    <button onclick="window.print()">🖨️ Print or Save as PDF</button>
   </section>
+</main>
 
-  <section class="section" id="create">
-    <h2>Trust Money AI Studio</h2>
-    <p>Describe the video you dream of creating.</p>
+<footer>
+  © 2026 Trust Money AI · Your imagination, your story.
+</footer>
 
-    <div class="creator">
-      <textarea id="prompt" placeholder="Example: A young Nigerian boy works hard, follows his dreams, and builds a successful business..."></textarea>
+<script>
+function createStory(){
+  const idea=document.getElementById("idea").value.trim();
+  const genre=document.getElementById("genre").value;
+  const hero=document.getElementById("hero").value.trim()||"the main character";
+  const count=Number(document.getElementById("length").value);
 
-      <button class="button" onclick="showMessage()">
-        Prepare My Video Idea
-      </button>
+  if(!idea){
+    alert("Please describe your story idea first.");
+    return;
+  }
 
-      <p id="message" class="note"></p>
-      <p class="note">
-        This is the first website version. Actual AI video generation
-        will require connecting a video-generation service.
-      </p>
-    </div>
-  </section>
+  const types={
+    drama:"An Emotional Drama",
+    comedy:"A Comedy Adventure",
+    romance:"A Love Story",
+    adventure:"An Exciting Adventure",
+    success:"A Journey to Success",
+    mystery:"A Mystery to Solve"
+  };
 
-  <footer>
-    <p>© 2026 Trust Money AI. All rights reserved.</p>
-    <p>Built for creativity. Powered by imagination.</p>
-  </footer>
+  const beats=[
+    ["The Beginning","Every great story starts somewhere. {hero} faces a new situation connected to this idea: {idea}. Life is about to change."],
+    ["The First Challenge","A difficult problem appears. {hero} must make a choice, and the future is uncertain."],
+    ["An Unexpected Meeting","A new person enters the story with important news. Their conversation changes how {hero} sees the situation."],
+    ["The Biggest Problem","Everything becomes more complicated. {hero} must find courage, think carefully, and decide what matters most."],
+    ["A New Plan","After learning an important lesson, {hero} makes a plan and takes the first step toward a solution."],
+    ["The Turning Point","An unexpected discovery gives {hero} another chance. The characters must work together to move forward."],
+    ["The Happy Ending","The journey reaches its conclusion. {hero} looks back on everything learned and begins a new chapter with hope."]
+  ];
 
-  <script>
-    function showMessage() {
-      const prompt = document.getElementById("prompt").value.trim();
-      const message = document.getElementById("message");
+  const dialogue={
+    drama:'"I will keep going, even when things are difficult," {hero} says.',
+    comedy:'"How did our simple plan become such a big adventure?" {hero} asks, laughing.',
+    romance:'"Sometimes the people who matter most are the ones who truly understand us," {hero} says.',
+    adventure:'"We have come this far. Let us discover what happens next!" {hero} says.',
+    success:'"My dream was only the beginning. Hard work helped me take the next step," {hero} says.',
+    mystery:'"Something does not add up. We need to find the truth," {hero} says.'
+  };
 
-      if (!prompt) {
-        message.textContent = "Please describe your video idea first.";
-        return;
-      }
+  document.getElementById("storyTitle").textContent=types[genre]+": "+idea.slice(0,65);
+  document.getElementById("storyIntro").textContent=
+    "Main character: "+hero+". Story idea: "+idea;
 
-      message.textContent =
-        "Your idea is ready! Actual AI video generation will be added when a video service is connected.";
+  const container=document.getElementById("scenes");
+  container.innerHTML="";
+
+  for(let i=0;i<count;i++){
+    const beat=beats[i];
+    let text=beat[1]
+      .replaceAll("{hero}",hero)
+      .replaceAll("{idea}",idea);
+
+    if(i===Math.min(2,count-1)){
+      text+=" "+dialogue[genre].replaceAll("{hero}",hero);
     }
-  </script>
 
+    if(i===count-1){
+      text+=" The story ends with a lesson about courage, choices, and new beginnings.";
+    }
+
+    const scene=document.createElement("article");
+    scene.className="scene";
+
+    const heading=document.createElement("h3");
+    heading.textContent="🎬 Scene "+(i+1)+": "+beat[0];
+
+    const paragraph=document.createElement("p");
+    paragraph.textContent=text;
+
+    scene.appendChild(heading);
+    scene.appendChild(paragraph);
+    container.appendChild(scene);
+  }
+
+  document.getElementById("results").style.display="block";
+  document.getElementById("results").scrollIntoView({behavior:"smooth"});
+}
+
+function downloadStory(){
+  const title=document.getElementById("storyTitle").textContent;
+  const intro=document.getElementById("storyIntro").textContent;
+  const scenes=document.getElementById("scenes").innerText;
+  const content=title+"\n\n"+intro+"\n\n"+scenes;
+  const blob=new Blob([content],{type:"text/plain;charset=utf-8"});
+  const link=document.createElement("a");
+  link.href=URL.createObjectURL(blob);
+  link.download="Trust-Money-AI-Story.txt";
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+</script>
 </body>
 </html>
